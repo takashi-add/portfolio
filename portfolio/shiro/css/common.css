@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* ======================  共通  ====================== */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Myriad Pro","Myriad Pro";
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "palt";
+  margin: auto;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  transition: 0.3s;
+  opacity: 0.8;
+}

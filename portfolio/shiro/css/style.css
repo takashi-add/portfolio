@@ -1,0 +1,441 @@
+@charset "UTF-8";
+
+/* ヘッダー */
+.header__inner {
+  position: relative;
+}
+
+/* メインイメージ */
+.header__inner img {
+  width: 100%;
+}
+
+.header__text__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header__title {
+  font-size: 12rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+
+.header__text {
+  font-size: 1.6rem;
+  font-family: "ヒラギノ角ゴ ProN", "W3";
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__text {
+    font-size: 1.4rem;
+  }
+}
+
+.header__text::before,
+.header__text::after {
+  content: "-";
+  padding: 1rem;
+}
+
+/* ドロワー */
+.drawer--left .drawer-hamburger,
+.drawer--left.drawer-open {
+  position: static;
+}
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+  background: #fff;
+  height: 1px;
+}
+
+.drawer-menu li {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.drawer-menu li:nth-child(1) {
+  margin-top: 3rem;
+}
+
+/* テキストボックス */
+.input__wrapper .text__box {
+  height: 50px;
+  width: 100%;
+  max-width: 960px;
+  border: dotted 2px #fff;
+  color: #fff;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1000px) {
+  .input__wrapper .text__box {
+    width: calc(100% - 30px);
+    height: 40px;
+    font-size: 2rem;
+  }
+}
+
+/* メインコンテンツ */
+main {
+  width: 100%;
+  max-width: 1000px; /*width:960px + padding:左右40px*/
+  margin: auto;
+  padding: 0 20px; /*左右に20px余白を追加する*/
+}
+
+/* コンテンツタイトル */
+.content__title {
+  font-family: "Poppins", "bold";
+  font-weight: bold;
+  font-size: 3.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .content__title {
+    font-size: 2.5rem;
+  }
+}
+
+.content__title::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  padding: 1rem 0;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #000;
+}
+
+.content__sub__title {
+  font-family: "Poppins", "bold";
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 1000px){
+  .content__sub__title {
+    font-size: 1.5rem;
+  }
+}
+
+.concept__wrapper,
+.work__wrapper,
+.florist__wrapper,
+.shop-information__wrapper,
+.contact-us__wrapper {
+  text-align: center;
+  padding: 8rem 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .concept__wrapper,
+  .work__wrapper,
+  .florist__wrapper,
+  .shop-information__wrapper,
+  .contact-us__wrapper {
+    padding: 4rem 0;
+  }
+}
+
+/* コンテンツテキスト */
+.content__text {
+  font-family: "Myriad Pro", "Regular";
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .content__text {
+    line-height: 1.8rem;
+  }
+}
+
+.concept__wrapper .content__text {
+  margin-bottom: 3rem;
+}
+
+/* コンテンツ Work */
+.work__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work__image__left .work__image__box:nth-child(1) {
+  margin-bottom: 10rem;
+}
+.work__image__right .work__image__box:nth-child(1) {
+  margin-top: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .work__image__left .work__image__box:nth-child(1) {
+    margin-bottom: 5rem;
+  }
+  .work__image__right .work__image__box:nth-child(1) {
+    margin-top: 5rem;
+  }
+}
+
+.work__image__box {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10rem;
+  max-width: 42rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .work__image__box {
+    margin-bottom: 5rem;
+  }
+}
+
+.work__image__box .content__text {
+  text-align: left;
+  white-space: normal;
+  line-height: 2.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .work__inner {
+    display: block;
+  }
+
+  .work__image__left,
+  .work__image__right {
+    width: 100%;
+  }
+
+  .work__image__box img {
+    max-width: 500px;
+  }
+}
+
+/* コンテンツ florist */
+
+.florist__image__wrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .florist__image__wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .florist__image__wrapper .content__text {
+    margin-bottom: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.sp__image__hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .sp__image__hidden {
+    display: block;
+  }
+
+  .pc__image__hidden {
+    display: none;
+  }
+}
+
+.florist__image__box {
+  padding-right: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .florist__image__box {
+    padding-right: 0;
+  }
+}
+
+.florist__image__box:nth-child(3n) {
+  padding-right: 0;
+}
+
+.florist__image__box {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .florist__image__box {
+    max-width: 1000px;
+  }
+}
+
+/* コンテンツ Shop information */
+.shop-information__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .shop-information__inner {
+    flex-wrap: wrap;
+  }
+
+  .shop-information__image {
+    width: 100%;
+  }
+}
+
+.shop-information__address__box {
+  padding: 3rem;
+  border: dotted 3px #ddd;
+}
+
+@media screen and (max-width: 1000px) {
+  .shop-information__address__box {
+    width: 100%;
+  }
+}
+
+.shop-information__address__box dl {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.shop-information__address__box dl:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.shop-information__address__box dt {
+  font-size: 1.6rem;
+  width: 10rem;
+  border-right: 1px solid #ddd;
+  padding-right: 3rem;
+  margin-right: 3rem;
+}
+
+.shop-information__address__box dd {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .shop-information__address__box dt {
+    font-size: 1.3rem;
+    width: 8rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+  .shop-information__address__box dd {
+    font-size: 1.3rem;
+  }
+}
+
+/* コンタクト */
+.contact-us__wrapper {
+  background: url(../images/contact_us.png);
+  background-size: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-us__wrapper {
+    background-size: auto;
+  }
+}
+
+.contact-us__wrapper .content__text {
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-us__wrapper .content__text {
+    font-size: 1.4rem;
+  }
+}
+
+.contact-us__info__box {
+  display: inline-block;
+  font-family: "Myriad Pro", "Regular";
+  font-size: 2rem;
+  padding: 2rem 10rem;
+  background: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact-us__info__box {
+    font-size: 1.5rem;
+    padding: 1rem 5rem;
+  }
+}
+
+.contact-us__info__text i {
+  margin-right: 1rem;
+}
+
+.contact-us__copy {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* グレーbackground */
+.section__florist {
+  position: relative;
+}
+
+.section__concept {
+  position: relative;
+}
+
+.gray__back__240 {
+  height: 240px;
+  width: 100vw;
+  background: #ededed;
+  position: absolute;
+  bottom: 0;
+  left: calc((100vw - 960px) / 2 * -1);
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  .gray__back__240 {
+    height: 80px;
+    left: -20px;
+  }
+}
+
+.gray__back__370 {
+  height: 37rem;
+  width: 100vw;
+  background: #ededed;
+  position: absolute;
+  top: 0;
+  left: calc((100vw - 960px) / 2 * -1);
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  .gray__back__370 {
+    height: 250px;
+    left: -20px;
+  }
+}

@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ======================  共通  ====================== */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Myriad Pro", "Myriad Pro";
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "palt";
+	letter-spacing: 0.05em;
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	transition: 0.3s;
+	opacity: 0.8;
+}
+
+.works__section {
+	background: url("../images/works-bgi@2x.jpg");
+	background-size: cover;
+	height: 986px;
+	max-width: 1440px;
+}
+
+@media (max-width: 800px) {
+	.works__section {
+		height: 800px;
+	}
+}
+
+@media (max-width: 480px) {
+	.works__section {
+		height: 1533px;
+	}
+}
+
+.contact__section {
+	background: url(../images/contact-bgi@2x.jpg);
+	background-size: cover;
+	height: 666px;
+	position: relative;
+}
+
+.contact__aria {
+	position: relative;
+	background: url(../images/contact-page-bgi@2x.jpg);
+	background-size: cover;
+	height: 453px;
+	max-width: 1440px;
+}
+
+@media (max-width: 480px) {
+	.contact__aria {
+		height: 485px;
+	}
+}
