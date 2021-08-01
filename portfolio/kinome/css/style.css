@@ -4,7 +4,7 @@ body {
 	font-family: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
 	font-size: 16px;
 	background: #fff;
-	max-width: 1400px;
+	max-width: 100%;
 	margin: auto;
 	overflow-x: hidden;
 }
@@ -72,8 +72,13 @@ body {
 		no-repeat;
 }
 .main__visual img {
-	width: 100%;
-	max-width: 1400px;
+	max-width: 100%;
+	margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+	.main__visual img {
+		margin-bottom: 0;
+	}
 }
 .latest__wrapper {
 	max-width: 1000px;
@@ -84,53 +89,51 @@ body {
 	border-radius: 5px;
 	margin-bottom: -150px;
 	transform: translateY(-150px);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 @media screen and (max-width: 768px) {
 	.latest__wrapper {
 		transform: translateY(-10px);
+		display: block;
 	}
+}
+.latest__wrapper .latest__title {
+	flex-basis: 10%;
+}
+.latest__wrapper ul {
+	flex-basis: 80%;
+}
+.latest__wrapper li {
+	display: flex;
+}
+.latest__wrapper li:nth-child(2){
+	margin-top: 10px;
+}
+.latest__wrapper time {
+	margin-right: 20px;
+}
+.latest__wrapper a {
+	color: #2e68d4;
 }
 .latest__title {
 	font-size: 18px;
 	font-weight: bold;
 	color: #55b75a;
+	background: url("/images/2x/latest@2x.jpg") no-repeat;
+	background-size: 20%;
+	background-position: top 0 left 0;
+	padding-left: 20px;
+}
+@media screen and (max-width: 768px) {
+	.latest__title {
+		background-size: 5%;
+	}
 }
 .latest__title img {
 	max-width: 30px;
 	padding-right: 10px;
-}
-.latest__text ul {
-	display: flex;
-	flex-wrap: wrap;
-}
-@media screen and (max-width: 768px) {
-	.latest__text ul {
-		display: block;
-	}
-}
-.latest__text li {
-	flex-basis: 20%;
-}
-@media screen and (max-width: 768px) {
-	.latest__text li {
-		margin-bottom: 10px;
-	}
-}
-.latest__text li:nth-child(2),
-.latest__text li:nth-child(3) {
-	flex-basis: 80%;
-}
-.latest__text li:nth-child(3) {
-	margin-left: auto;
-	margin-top: 10px;
-}
-.latest__text a {
-	color: #2e68d4;
-}
-@media screen and (max-width: 768px) {
-	.latest__text {
-		display: block;
-	}
 }
 .content__section {
 	background: #fff4ea;
@@ -464,6 +467,8 @@ footer {
 	text-align: left;
 	padding: 10px 0;
 }
+
+.lower__list__wrapper dt,
 .lower__list__wrapper dd {
 	padding: 5px 0;
 }
@@ -486,6 +491,11 @@ footer {
 	background: url("../images/2x/icon3@2x.png") no-repeat;
 	background-size: 1.5%;
 }
+@media screen and (max-width: 768px){
+	.star__list dd::before{
+		background-size: 3%;
+	}
+}
 .star__list dd:last-child:before {
 	position: absolute;
 	left: 0;
@@ -498,6 +508,11 @@ footer {
 	background-size: 1%, 1.5%;
 	background-position: top 0 left 0.3%, top 0 left 0;
 	z-index: -1;
+}
+@media screen and (max-width: 768px) {
+	.star__list dd:last-child:before {
+		background-size: 2.5%, 4%;
+	}
 }
 .intro__wrapper {
 	margin-bottom: 100px;
