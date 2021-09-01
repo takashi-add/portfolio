@@ -1,9 +1,9 @@
 <template>
   <div>
     <v-row>
-      <product :products="products"></product>
+      <product v-for="(product, key) in products" :key="key" :product="product"></product>
     </v-row>
-	</div>
+  </div>
 </template>
 <script>
   import Product from "./Product.vue";
