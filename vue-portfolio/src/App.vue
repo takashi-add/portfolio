@@ -1,7 +1,7 @@
 <template>
-<v-app>
-<Home></Home>
-</v-app>
+  <v-app>
+    <Home></Home>
+  </v-app>
 </template>
 <script>
 import Home from "./views/Home.vue";

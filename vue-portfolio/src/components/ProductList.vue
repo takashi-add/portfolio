@@ -1,48 +1,80 @@
 <template>
   <div>
     <v-row>
-      <product v-for="(product, key) in products" :key="key" :product="product"></product>
+      <product
+        v-for="(product, key) in products"
+        :key="key"
+        :product="product"
+      ></product>
     </v-row>
   </div>
+<ProductHeader 
+  :sortYear="sortYear" 
+  @sortYearChange="sortYearChanged($event)"
+></ProductHeader>
+<code class="p-textNoteCode__main"></code>
 </template>
 <script>
-  import Product from "./Product.vue";
+import Product from "./Product.vue";
 export default {
   name: "ProductList",
   components: {
-    Product
+    Product,
   },
   data: () => ({
-    products: [{
+    products: [
+      {
+        id: 1,
+        name: "work1",
+        image: "../assets/works/dummyimage.png",
+        year: "2020",
+        category: "コーポレート",
+        use: "html css JS",
+      },
+      {
+        id: 2,
+        name: "work2",
+        image: "../assets/works/dummyimage.png",
+        year: "2019",
+        category: "LP",
+        use: "Vue.js",
+        info: "",
+      },
+      {
+        id: 3,
+        name: "work3",
+        image: "../assets/works/dummyimage.png",
+        year: "2018",
+        category: "ECサイト",
+        use: "デザイン",
+      },
+      {
+        id: 4,
+        name: "work4",
+        image: "../assets/works/dummyimage.png",
+        year: "2019",
+        category: "LP",
+        use: "Vue.js",
+        info: "",
+      },
+    ],
+  }),
+data : () => ({
+  sortYear: "全て", // ←初期設定
+  products: [
+    {
       id: 1,
       name: "work1",
-      image: "../assets/works/dummyimage.png",
-      year: "2020",
-      category: "コーポレート",
-      use: "html css JS",
-    }, {
-      id: 2,
-      name: "work2",
-      image: "../assets/works/dummyimage.png",
-      year: "2019",
       category: "LP",
-      use: "Vue.js",
-      info: "",
-    }, {
-      id: 3,
-      name: "work3",
-      image: "../assets/works/dummyimage.png",
-      year: "2018",
-      category: "ECサイト",
-      use: "デザイン",
-    }, {
-      id: 4,
-      name: "work4",
-      image: "../assets/works/dummyimage.png",
-      year: "2019",
-      category: "LP",
-      use: "Vue.js",
-      info: "",
-    }, ],
-  }),
-}; </script>
+      use: "Vue.js"
+    }
+  ]
+}),
+methods : {
+  sortYearChanged: function (year) {
+    console.log(year);
+    this.sortYear = year;
+  }
+},
+};
+</script>
