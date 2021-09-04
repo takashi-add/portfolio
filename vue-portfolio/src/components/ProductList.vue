@@ -7,12 +7,11 @@
         :product="product"
       ></product>
     </v-row>
-  </div>
 <ProductHeader 
   :sortYear="sortYear" 
   @sortYearChange="sortYearChanged($event)"
 ></ProductHeader>
-<code class="p-textNoteCode__main"></code>
+  </div>
 </template>
 <script>
 import Product from "./Product.vue";
@@ -21,6 +20,23 @@ export default {
   components: {
     Product,
   },
+data : () => ({
+  sortYear: "全て", // ←初期設定
+  products: [
+    {
+      id: 1,
+      name: "work1",
+      category: "LP",
+      use: "Vue.js"
+    }
+  ]
+}),
+methods : {
+  sortYearChanged: function (year) {
+    console.log(year);
+    this.sortYear = year;
+  }
+},
   data: () => ({
     products: [
       {
@@ -59,22 +75,5 @@ export default {
       },
     ],
   }),
-data : () => ({
-  sortYear: "全て", // ←初期設定
-  products: [
-    {
-      id: 1,
-      name: "work1",
-      category: "LP",
-      use: "Vue.js"
-    }
-  ]
-}),
-methods : {
-  sortYearChanged: function (year) {
-    console.log(year);
-    this.sortYear = year;
-  }
-},
 };
 </script>
