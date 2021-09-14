@@ -24,5 +24,6 @@
 </template>
 <script>
 export default { name: "Product", props: ["product"] };
+// propsを親コンポーネントに送信
 </script>
 <style></style>

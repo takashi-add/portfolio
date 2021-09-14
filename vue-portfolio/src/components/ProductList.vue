@@ -14,13 +14,17 @@
 
 <script>
 import ProductHeader from "./ProductHeader.vue";
+// ProductHeader.vueからProductHeader読み込み
 import Product from "./Product.vue";
+// Product.vueからProductを読み込み
 export default {
   name: "ProductList",
   components: { ProductHeader, Product },
+// コンポーネントProductHeader Productを送信
   data: () => ({
     sortYear: "全て",
     products: [
+// 子コンポーネントからpropsを取得
       {
         id: 1,
         name: "movie create",
