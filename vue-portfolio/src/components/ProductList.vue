@@ -20,11 +20,11 @@ import Product from "./Product.vue";
 export default {
   name: "ProductList",
   components: { ProductHeader, Product },
-// コンポーネントProductHeader Productを送信
+  // コンポーネントProductHeader Productを送信
   data: () => ({
     sortYear: "全て",
     products: [
-// 子コンポーネントからpropsを取得
+      // 子コンポーネントからpropsを取得
       {
         id: 1,
         name: "movie create",

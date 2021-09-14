@@ -11,7 +11,7 @@ export default {
   name: "SkillList",
   components: { Skill },
   data: () => ({
-    Skills: [
+    skills: [
       {
         id: 1,
         name: "movie create",

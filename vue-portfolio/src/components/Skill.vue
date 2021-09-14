@@ -5,24 +5,20 @@
       </v-img>
       <v-card-subtitle class="pb-0">{{ skills.year }}</v-card-subtitle>
       <v-card-text class="text--primary">
-        <div>{{ skills.name }}</div>
         <div>{{ skills.category }}</div>
         <div>{{ skills.use }}</div>
         <div>{{ skills.page }}</div>
         <div>{{ skills.tool }}</div>
         <div>{{ skills.info }}</div>
         <div>{{ skills.time }}</div>
+        <div>aaaa</div>
       </v-card-text>
-      <v-card-actions>
-        <v-btn color="orange" :href="skills.href" target="_blank"> url </v-btn>
-        <v-btn color="orange" :href="skills.href" target="_blank"> INFO </v-btn>
-      </v-card-actions>
     </v-card>
   </v-col>
 </template>
           <script>
 export default {
   name: "Skill",
-  props: ["SkillList"],
+  props: ["skill"]
 };
 </script>
