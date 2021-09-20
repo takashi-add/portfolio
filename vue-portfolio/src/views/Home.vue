@@ -22,7 +22,7 @@
         <div class="inner">
           <div class="section-title-block">
             <h2 class="headline font-weight-bold text-center my-16">SKILL</h2>
-            <skillList></skillList>
+            <SkillList></SkillList>
           </div>
         </div>
       </section>
