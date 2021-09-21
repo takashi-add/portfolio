@@ -1,10 +1,8 @@
 <template>
   <div>
     <v-row>
-      <!-- v-for付与してみました -->
-      <Skill v-for="skill in skills" v-bind:key="skill">{{ skill.name }}</Skill>
-      <p v-for="skill in skills" v-bind:key="skill">{{ skill.name }}</p>
-      <!-- v-for付与してみました -->
+      <Skill v-for="(skill, key) in skills" :key="key" :skill="skill">{{skills.name}}</Skill>
+      <!-- <p v-for="skill in skills" v-bind:key="skill">{{ skill }}</p> -->
     </v-row>
   </div>
 </template>
@@ -14,7 +12,7 @@ export default {
   name: "SkillList",
   components: { Skill },
   data: () => ({
-    skill: [
+    skills: [
       {
         id: 1,
         name: "movie create",

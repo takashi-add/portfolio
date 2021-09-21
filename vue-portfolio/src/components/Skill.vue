@@ -18,6 +18,6 @@
           <script>
 export default {
   name: "Skill",
-  props: ["skill"]
+  props: ["skill"],
 };
 </script>
